@@ -1,0 +1,12 @@
+[Unit]
+Description=Squid container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a squid
+ExecStop=/usr/bin/docker stop -t 5 squid
+
+[Install]
+WantedBy=local.target
