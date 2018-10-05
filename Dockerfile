@@ -7,7 +7,6 @@ RUN apk add --update squid tzdata && \
     apk del tzdata && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
 
-
 ADD entrypoint.sh /usr/local/bin/
 
 EXPOSE 3128/tcp

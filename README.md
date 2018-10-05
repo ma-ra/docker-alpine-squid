@@ -7,7 +7,7 @@
       docker build -t mara88/docker-alpine-squid .
 * Run:
 
-      docker run --name=squid -h squid -d --privileged=true -v squid.conf:/etc/openvpn/squid.conf:ro -p 172.17.0.1:3128:3128 mara88/docker-alpine-squid
+      docker run --name=squid -h squid -d --privileged=true -v $(pwd)/squid.conf:/etc/squid/squid.conf:ro -p 172.17.0.1:3128:3128 mara88/docker-alpine-squid
       
 * Show log:
 
